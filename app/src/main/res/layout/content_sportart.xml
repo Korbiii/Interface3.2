@@ -136,5 +136,10 @@
             android:layout_height="56dp"
             android:text="Ligaspiel" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="noch ein Button"/>
+
     </LinearLayout>
 </RelativeLayout>
