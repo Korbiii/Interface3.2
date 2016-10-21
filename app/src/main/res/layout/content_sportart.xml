@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_sportart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.korbi.interface32.Sportart"
+    tools:showIn="@layout/activity_sportart">
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/image_pokal"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/pokal" />
+
+        <TextView
+            android:id="@+id/textview_siege"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/image_pokal"
+            android:layout_toRightOf="@+id/image_pokal"
+            android:text="2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textiview_rang"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_toEndOf="@+id/textview_siege"
+            android:text="Rang: " />
+
+        <TextView
+            android:id="@+id/textview_rang2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/textiview_rang"
+            android:text="182" />
+
+
+        <ImageView
+            android:id="@+id/image_iks"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/image_pokal"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/rotesx" />
+
+        <TextView
+            android:id="@+id/textiview_niederlage"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_siege"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/image_iks"
+            android:layout_toRightOf="@+id/image_iks"
+            android:text="2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textview_weltw"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_siege"
+            android:layout_marginLeft="32dp"
+            android:layout_toEndOf="@+id/textiview_niederlage"
+            android:layout_toRightOf="@+id/textiview_niederlage"
+            android:text="Weltweit: "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textview_weltweit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_rang2"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/textview_weltw"
+            android:layout_toRightOf="@+id/textview_weltw"
+            android:text="2"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textview_weltw"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_top"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:onClick="freund"
+            android:text="Freundschaftsspiel" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Trainingspartner \n suchen" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Ligaspiel" />
+
+    </LinearLayout>
+</RelativeLayout>

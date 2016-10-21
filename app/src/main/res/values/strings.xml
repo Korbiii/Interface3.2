@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Interface32</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sportart">Sportart</string>
+    <string-array name="names">
+        <item>Beachen</item>
+        <item>Fußball</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_sportart2">Sportart2</string>
+</resources>
