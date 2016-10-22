@@ -70,6 +70,11 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void einladungen(View view){
+        Intent intent = new Intent(this, Einladungen.class);
+        startActivity(intent);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
