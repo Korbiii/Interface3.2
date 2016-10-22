@@ -13,4 +13,11 @@
     tools:context="com.example.korbi.interface32.Einladungen"
     tools:showIn="@layout/activity_einladungen">
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycleView">
+
+    </android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>
