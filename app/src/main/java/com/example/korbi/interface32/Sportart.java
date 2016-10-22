@@ -30,7 +30,7 @@ public class Sportart extends AppCompatActivity {
     Spinner mySpinner;
     String[] beach = {"1", "8", "145", "4", "5"};
     String[] fuss = {"0", "7", "125", "8", "2"};
-
+    Button training;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +66,7 @@ public class Sportart extends AppCompatActivity {
 
             }
         });
-
+        training = (Button) findViewById(R.id.button);
 
     }
 
@@ -81,14 +81,14 @@ public class Sportart extends AppCompatActivity {
         TextView rang = (TextView) findViewById(R.id.textview_rang2);
         TextView weltweit = (TextView) findViewById(R.id.textview_weltweit);
         if (string.equals("Beachen")) {
-
+            training.setVisibility(View.GONE);
             siege.setText(beach[1]);
             niederlage.setText(beach[2]);
             rang.setText(beach[3]);
             weltweit.setText(beach[4]);
 
         } else {
-
+            training.setVisibility(View.VISIBLE);
             siege.setText(fuss[1]);
             niederlage.setText(fuss[2]);
             rang.setText(fuss[3]);

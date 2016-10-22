@@ -17,26 +17,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="2"
-        android:rowCount="2">
+        android:rowCount="2"
+        >
 
         <Button
             android:id="@+id/sportart_button"
             android:layout_marginRight="4dp"
             android:text="Sportart"
-            android:onClick="sportart"/>
+            android:elevation="4dp"
+            android:onClick="sportart"
+            />
 
         <Button
             android:id="@+id/einladungen_button"
             android:text="Einladungen"
             android:onClick="einladungen"
-
-
-            />
+            android:elevation="0dp"
+            style="@style/Widget.AppCompat.Button" />
 
         <Button
             android:id="@+id/nachrichten_button"
             android:layout_marginRight="4dp"
-            android:text="Nachrichten" />
+            android:text="Nachrichten"
+             />
 
 
     </GridLayout>

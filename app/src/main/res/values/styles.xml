@@ -12,12 +12,17 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="AppTheme.CustomeTheme">
-        <item name="android:windowIsTranslucent">false</item>
-        <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="android:windowElevation">10dp</item>
-    </style>
 
+    <style name="AppTheme.Custom1">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowElevation">4dp</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+    <style name="AppTheme.weiss">
+        <item name="android:background">@color/weiss</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

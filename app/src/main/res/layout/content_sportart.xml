@@ -128,7 +128,9 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Trainingspartner \n suchen" />
+            android:text="Trainingspartner \n suchen"
+            android:elevation="0dp"
+            />
 
         <Button
             android:id="@+id/button2"

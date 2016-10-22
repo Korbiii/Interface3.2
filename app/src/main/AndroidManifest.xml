@@ -38,7 +38,7 @@
                 android:value="com.example.korbi.interface32.Home" />
         </activity>
         <activity android:name=".Pop"
-            android:theme="@style/AppTheme.CustomeTheme">
+            android:theme="@style/AppTheme.Custom1">
         </activity>
     </application>
 
