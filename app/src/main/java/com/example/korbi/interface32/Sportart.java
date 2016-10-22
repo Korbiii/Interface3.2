@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,10 @@ public class Sportart extends AppCompatActivity {
     String[] beach = {"1", "8", "145", "4", "5"};
     String[] fuss = {"0", "7", "125", "8", "2"};
     Button training;
+    Button fSpiel;
+    Button lSpiel;
+    RelativeLayout rangLayout;
+    RelativeLayout gelaufen;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,8 +71,11 @@ public class Sportart extends AppCompatActivity {
 
             }
         });
-        training = (Button) findViewById(R.id.button);
-
+        training = (Button) findViewById(R.id.button_training);
+        fSpiel = (Button) findViewById(R.id.button_fSpiel);
+        lSpiel = (Button) findViewById(R.id.button_lSpiel);
+        rangLayout = (RelativeLayout) findViewById(R.id.layout_top);
+        gelaufen = (RelativeLayout) findViewById(R.id.layout_laufen);
     }
 
     public void freund(View v) {
@@ -82,17 +90,32 @@ public class Sportart extends AppCompatActivity {
         TextView weltweit = (TextView) findViewById(R.id.textview_weltweit);
         if (string.equals("Beachen")) {
             training.setVisibility(View.GONE);
+            fSpiel.setVisibility(View.VISIBLE);
+            lSpiel.setVisibility(View.VISIBLE);
             siege.setText(beach[1]);
             niederlage.setText(beach[2]);
             rang.setText(beach[3]);
             weltweit.setText(beach[4]);
+            rangLayout.setVisibility(RelativeLayout.VISIBLE);
 
-        } else {
-            training.setVisibility(View.VISIBLE);
+            gelaufen.setVisibility(RelativeLayout.GONE);
+        } else if (string.equals("Fußball")) {
+            training.setVisibility(View.GONE);
+            fSpiel.setVisibility(View.VISIBLE);
+            lSpiel.setVisibility(View.VISIBLE);
             siege.setText(fuss[1]);
             niederlage.setText(fuss[2]);
             rang.setText(fuss[3]);
             weltweit.setText(fuss[4]);
+            gelaufen.setVisibility(RelativeLayout.GONE);
+            rangLayout.setVisibility(RelativeLayout.VISIBLE);
+
+        } else if (string.equals("Laufen")) {
+            training.setVisibility(View.VISIBLE);
+            fSpiel.setVisibility(View.GONE);
+            lSpiel.setVisibility(View.GONE);
+            rangLayout.setVisibility(RelativeLayout.GONE);
+            gelaufen.setVisibility(RelativeLayout.VISIBLE);
         }
     }
 
