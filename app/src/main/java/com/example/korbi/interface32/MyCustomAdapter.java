@@ -7,8 +7,10 @@ import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -32,7 +34,7 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int position) {
 
-        View view = inflater.inflate(R.layout.einladungen_item,parent,false);
+        View view = inflater.inflate(R.layout.einladungen_item, parent, false);
 
         MyViewHolder holder = new MyViewHolder(view);
 
@@ -45,6 +47,38 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
         myViewHolder.textview.setText(data.get(position).title);
         myViewHolder.start.setText(data.get(position).start);
         myViewHolder.stopp.setText(data.get(position).stop);
+
+        final int currentPosition = position;
+        final Information infoData = data.get(position);
+
+           myViewHolder.keineZ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                removeItem(infoData);
+            }
+
+
+        });
+
+        myViewHolder.habZ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                removeItem(infoData);
+            }
+        });
+
+
+    }
+
+    private void removeItem(Information infoData) {
+        int position = data.indexOf(infoData);
+        data.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public void addItem(int pos, Information infoData) {
+        data.add(pos, infoData);
+        notifyItemInserted(pos);
     }
 
     @Override
@@ -57,13 +91,16 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
         TextView textview;
         TextView start;
         TextView stopp;
-        ImageView imageview;
+        Button habZ;
+        Button keineZ;
 
-        public MyViewHolder (View itemView) {
+        public MyViewHolder(View itemView) {
             super(itemView);
             textview = (TextView) itemView.findViewById(R.id.txv_row);
             start = (TextView) itemView.findViewById(R.id.startzeit);
             stopp = (TextView) itemView.findViewById(R.id.stoppzeit);
+            habZ = (Button) itemView.findViewById(R.id.habeZ_button);
+            keineZ = (Button) itemView.findViewById(R.id.keineZ_button);
         }
     }
 }

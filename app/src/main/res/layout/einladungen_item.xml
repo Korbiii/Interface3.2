@@ -15,6 +15,7 @@
             android:id="@+id/txv_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="10dp"
             android:text="Hello How Are you" />
@@ -24,9 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-
+            android:layout_marginBottom="8dp"
             android:layout_below="@+id/txv_row"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="64dp"
             android:textSize="28sp" />
 
@@ -34,9 +34,9 @@
             android:id="@+id/stoppzeit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/txv_row"
-            android:layout_centerVertical="true"
             android:layout_marginRight="64dp"
             android:textSize="28sp" />
 
@@ -47,6 +47,29 @@
             android:layout_centerHorizontal="true"
             android:text="-"
             android:textSize="28sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/startzeit"
+            android:id="@+id/keineZ_button"
+            android:text="Keine Zeit"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/startzeit"
+            android:id="@+id/habeZ_button"
+            android:text="Hab Zeit"
+            />
+
 
 
     </RelativeLayout>
