@@ -27,7 +27,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.korbi.interface32.Home" />
         </activity>
-
         <activity
             android:name=".Einladungen"
             android:label="@string/title_activity_einladungen"
@@ -37,8 +36,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.korbi.interface32.Home" />
         </activity>
-        <activity android:name=".Pop"
-            android:theme="@style/AppTheme.Custom1">
+        <activity
+            android:name=".Pop"
+            android:theme="@style/AppTheme.Custom1"></activity>
+        <activity
+            android:name=".ZeitplanListe"
+            android:label="@string/title_activity_zeitplan_liste"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.korbi.interface32.Home" />
         </activity>
     </application>
 

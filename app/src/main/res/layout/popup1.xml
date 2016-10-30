@@ -29,7 +29,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="32dp"
         android:layout_centerVertical="true"
-        android:onClick="beginn"
+        android:onClick="ende"
         android:text="Ende"
         style="@style/Widget.AppCompat.Button.Borderless" />
 
@@ -49,5 +49,6 @@
         android:layout_centerHorizontal="true"
 
         />
+
 
 </RelativeLayout>

@@ -42,7 +42,7 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
+    public void onBindViewHolder(MyViewHolder myViewHolder, final int position) {
 
         myViewHolder.textview.setText(data.get(position).title);
         myViewHolder.start.setText(data.get(position).start);
@@ -55,6 +55,7 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
             @Override
             public void onClick(View v) {
                 removeItem(infoData);
+                data.remove(infoData);
             }
 
 
@@ -64,6 +65,8 @@ public class MyCustomAdapter extends RecyclerView.Adapter<MyCustomAdapter.MyView
             @Override
             public void onClick(View v) {
                 removeItem(infoData);
+                data.remove(infoData);
+                Home.zeitPlan(infoData);
             }
         });
 

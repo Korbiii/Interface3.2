@@ -41,6 +41,14 @@
             android:text="Nachrichten"
              />
 
+        <Button
+            android:id="@+id/zeitplan_button"
+            android:layout_marginRight="4dp"
+            android:text="Zeitplan"
+            android:onClick="zeitplan"
+            />
+
+
 
     </GridLayout>
 

@@ -12,7 +12,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-public class Einladungen extends AppCompatActivity {
+public class ZeitplanListe extends AppCompatActivity {
 
     RecyclerView recyclerView;
     MyCustomAdapter adapter;
@@ -20,11 +20,11 @@ public class Einladungen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_einladungen);
+        setContentView(R.layout.activity_zeitplan_liste);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         d1 = new ArrayList<>();
-        d1 = Home.get();
+        d1 = Home.get2();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,7 @@ public class Einladungen extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycleView);
+        recyclerView = (RecyclerView) findViewById(R.id.recycleView2);
         adapter = new MyCustomAdapter(this,d1);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

@@ -28,6 +28,7 @@ import java.util.List;
 public class Sportart extends AppCompatActivity {
 
     Toolbar myToolbar;
+    int art = 1;
     Spinner mySpinner;
     String[] beach = {"1", "8", "145", "4", "5"};
     String[] fuss = {"0", "7", "125", "8", "2"};
@@ -79,8 +80,20 @@ public class Sportart extends AppCompatActivity {
     }
 
     public void freund(View v) {
-        Intent intent = new Intent(this, Pop.class);
+        Bundle b = new Bundle();
+        b.putInt("sportart",art);
+        Intent intent = new Intent(this,Pop.class);
+        intent.putExtras(b);
         startActivity(intent);
+    }
+
+    public int welcheSportart(){
+       String temp = mySpinner.getSelectedItem().toString();
+        if(temp.equals("Beachen")){
+            return 1;
+        }else{
+            return 2;
+        }
     }
 
     private void update(String string) {
@@ -97,7 +110,7 @@ public class Sportart extends AppCompatActivity {
             rang.setText(beach[3]);
             weltweit.setText(beach[4]);
             rangLayout.setVisibility(RelativeLayout.VISIBLE);
-
+            art=1;
             gelaufen.setVisibility(RelativeLayout.GONE);
         } else if (string.equals("Fußball")) {
             training.setVisibility(View.GONE);
@@ -109,13 +122,14 @@ public class Sportart extends AppCompatActivity {
             weltweit.setText(fuss[4]);
             gelaufen.setVisibility(RelativeLayout.GONE);
             rangLayout.setVisibility(RelativeLayout.VISIBLE);
-
+            art=2;
         } else if (string.equals("Laufen")) {
             training.setVisibility(View.VISIBLE);
             fSpiel.setVisibility(View.GONE);
             lSpiel.setVisibility(View.GONE);
             rangLayout.setVisibility(RelativeLayout.GONE);
             gelaufen.setVisibility(RelativeLayout.VISIBLE);
+            art=0;
         }
     }
 
