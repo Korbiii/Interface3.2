@@ -10,5 +10,6 @@ import java.util.Date;
 public class Project {
     public int id,numParti;
     public int begin_h,begin_m,end_h,end_m,day,month,year;
+    public String extraInfo;
 
 }

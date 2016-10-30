@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:onClick="datum"
+        android:id="@+id/button_datum"
+        android:text="Datum"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_datum"
+        android:layout_margin="8dp"
+        android:id="@+id/editText_additional"
+        android:maxLines="1"
+        android:hint="Ort, Habe Ball etc..."
+        />
+
+
+    <Button
+        android:id="@+id/button_beginn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"
+        android:onClick="beginn"
+        android:text="Beginn" />
+
+    <Button
+        android:id="@+id/button_ende"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="32dp"
+        android:onClick="ende"
+        android:text="Ende" />
+
+    <TextView
+        android:id="@+id/button_until"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="-" />
+
+
+    <TextView
+        android:id="@+id/textview_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_ende"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/button_plus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@id/textview_num"
+        android:layout_below="@id/button_beginn"
+        android:layout_marginLeft="16dp"
+        android:onClick="plus"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/button_minus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignRight="@id/textview_num"
+        android:layout_below="@id/button_beginn"
+        android:layout_marginRight="16dp"
+        android:onClick="minus"
+        android:text="-" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:onClick="ok"
+        android:text="ok" />
+
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
+        android:onClick="cancel"
+        android:text="Cancel" />
+
+
+</RelativeLayout>
